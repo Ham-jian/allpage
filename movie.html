@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>ShowBox</title>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <link rel="stylesheet" href="css/movie.css">
+</head>
+<body>
+
+  <!--TOP버튼-->
+  <div class="top_btn">
+    <a href="#"><i class="xi-angle-up"></i></a>
+  </div>
+  
+  <div class="wrap">
+    <header>
+      <div class="headerBox indent">헤더검정배경</div>
+      <nav>
+        <ul class="gnb">
+          <li class="main"><a href="about.html"><span>ABOUT</span></a>
+            <ul class="sub s1">
+              <li><a href="about.html">Showbox</a></li>
+              <li><a href="#history">History</a></li>
+              <li><a href="#business">Business Area</a></li>
+            </ul>
+          </li>
+          <li class="main"><a href="movie.html"><span>MOVIE</span></a>
+            <ul class="sub s2">
+              <li><a href="movie.html">Now Showing </a></li>
+              <li><a href="#none">Line Up</a></li>
+            </ul>
+          </li>
+          <li class="main"><a href="news.html"><span>NEWS</span></a>
+            <ul class="sub s3">
+              <li><a href="news.html">News</a></li>
+              <li><a href="news.html">Notice</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <div><a href="index.html"><img src="image/logo.svg" alt="logo"></a></div>
+
+        <ul class="util">
+          <li class="main"><a href="contact.html"><span>CONTACT US</span></a></li>
+          <li class="allmenu">
+            <div class="trigger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 모달 -->
+      <div class="modal">
+        <div class="modal-content">
+          <div class="inputWrap">
+            <input type="search" placeholder="영화명을 입력해 주세요">
+            <img src="image/search.svg" alt="검색창">
+          </div>
+
+          <div class="menu_list ml1">
+            <div>
+              <a href="about.html">ABOUT</a>
+            </div>
+            <ul class="sub_list sl1">
+              <li>
+                <a href="about.html"><p>Showbox</p> <span>쇼박스</span></a>
+              </li>
+              <li>
+                <a href="about.html"><p>History</p> <span>연혁</span></a>
+              </li>
+              <li>
+                <a href="about.html"><p>Business Area </p><span>사업영역</span></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="menu_list ml2">
+            <div>
+              <a href="movie.html">MOVIE</a>
+            </div>
+            <ul class="sub_list sl2">
+              <li>
+                <a href="movie.html"><p>Line Up</p> <span>라인업</span></a>
+              </li>
+              <li>
+                <a href="movie.html"><p>Now Showing</p> <span>현재상영작</span></a>
+              </li>
+            </ul>
+          </div>
+            
+          <div class="menu_list ml3">
+            <div>
+              <a href="news.html">NEWS</a>
+            </div>
+            <ul class="sub_list sl3">
+              <li>
+                <a href="news.html"><p>News</p> <span>뉴스</span></a>
+              </li>
+              <li>
+                <a href="news.html"><p>Notice</p> <span>공지</span></a>
+              </li>
+            </ul>
+          </div>
+            
+          <div class="menu_list ml4">
+            <div><a href="contact.html">CONTACT</a></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="tabmenu">
+        <!-- 탭 메뉴 -->
+        <ul class="tab">
+          <li class="t1 active" data-alt="tab1">
+            <span class="icon xi-arrow-right"></span>
+            <span>Line Up</span>
+          </li>
+          <!-- <li class="tab_sub">
+            <ul>
+              <li class="ts1 active" data-alt="all">ALL</li>
+              <li class="ts2" data-alt="2023">2023</li>
+              <li class="ts3" data-alt="2022">2022</li>
+              <li class="ts4" data-alt="2021">2021</li>
+              <li class="ts5" data-alt="2020">2020</li>
+          </li> -->
+          <li class="t2" data-alt="tab2">
+            <span class="icon xi-arrow-right"></span>
+            <span>Now Showing</span>
+          </li>
+        </ul>
+
+        <!-- 탭메뉴 클릭시 바뀌는 우측내용 -->
+        <div class="tabContents">
+          <div id="tab1" class="active">
+            <ul class="lineUp">
+              <li>
+                <a href="#" class="2023"><div></div></a>
+                <h4>비공식작전</h4>
+                <p class="detail">
+                  <span>비공식작전</span>
+                  <span>감독 &nbsp; 김성훈</span>
+                  <span>주연 &nbsp; 하정우, 주지훈</span>
+                  <span>제작사 &nbsp; 와인드업필름, 와이낫필름</span>
+                  <span>자세히 보기<em class="xi-angle-right-min"></em></span>
+                </p>
+              </li>
+              <li>
+                <a href="#" class="2023"><div></div></a>
+                <h4>스즈메의 문단속</h4>
+                <p class="detail">
+                  <span>비공식작전</span>
+                  <span>감독 &nbsp; 신카이 마코토</span>
+                  <span>주연 &nbsp; 하라 나노카, 마츠무라 호쿠토</span>
+                  <span>제작사 &nbsp; 코믹스웨이브필름</span>
+                  <span>자세히 보기<em class="xi-angle-right-min"></em></span>
+                </p>
+              </li>
+              <li>
+                <a href="#" class="2023"><div></div></a>
+                <h4>시민덕희</h4>
+                <p class="detail">
+                  <span>비공식작전</span>
+                  <span>감독 &nbsp; 박영주</span>
+                  <span>주연 &nbsp; 라미란, 공명, 염혜란</span>
+                  <span>제작사 &nbsp; 씨제스엔터테인먼트</span>
+                  <span>자세히 보기<em class="xi-angle-right-min"></em></span>
+                </p>
+              </li>
+              <li>
+                <a href="#" class="2023"><div></div></a>
+                <h4>휴가</h4>
+                <p class="detail">
+                  <span>비공식작전</span>
+                  <span>감독 &nbsp; 육상효</span>
+                  <span>주연 &nbsp; 신민아, 김해숙</span>
+                  <span>제작사 &nbsp; 글뫼</span>
+                  <span>자세히 보기<em class="xi-angle-right-min"></em></span>
+                </p>
+              </li>
+              <li>
+                <a href="#"><div></div></a>
+                <h4>비상선언</h4>
+                <p class="detail">
+                  <span>비공식작전</span>
+                  <span>감독 &nbsp; 한재림</span>
+                  <span>주연 &nbsp; 송강호, 이병헌, 전도연</span>
+                  <span>제작사 &nbsp; (주)매그넘나인</span>
+                  <span>자세히 보기<em class="xi-angle-right-min"></em></span>
+                </p>
+              </li>
+              <li>
+                <a href="#"><div></div></a>
+                <h4>이상한 나라의 수학자</h4>
+                <p class="detail">
+                  <span>비공식작전</span>
+                  <span>감독 &nbsp; 박동훈</span>
+                  <span>주연 &nbsp; 최민식, 김동휘, 박병은</span>
+                  <span>제작사 &nbsp; 조이래빗</span>
+                  <span>자세히 보기<em class="xi-angle-right-min"></em></span>
+                </p>
+              </li>
+              <li>
+                <a href="#"><div></div></a>
+                <h4>싱크홀</h4>
+                <p class="detail">
+                  <span>비공식작전</span>
+                  <span>감독 &nbsp; 김지훈</span>
+                  <span>주연 &nbsp; 차승원, 김성균, 이광수</span>
+                  <span>제작사 &nbsp; 더타워픽쳐스</span>
+                  <span>자세히 보기<em class="xi-angle-right-min"></em></span>
+                </p>
+              </li>
+              <li>
+                <a href="#"><div></div></a>
+                <h4>랑종</h4>
+                <p class="detail">
+                  <span>비공식작전</span>
+                  <span>감독 &nbsp; 반종 피산다나쿤</span>
+                  <span>주연 &nbsp; 나릴야 (야다) 굴몽콜페크</span>
+                  <span>제작사 &nbsp; 노던크로스</span>
+                  <span>자세히 보기<em class="xi-angle-right-min"></em></span>
+                </p>
+              </li>
+              <li>
+                <a href="#"><div></div></a>
+                <h4>국제수사</h4>
+                <p class="detail">
+                  <span>비공식작전</span>
+                  <span>감독 &nbsp; 김봉한</span>
+                  <span>주연 &nbsp; 곽도원, 김대명, 김희원</span>
+                  <span>제작사 &nbsp; 영화사 장춘</span>
+                  <span>자세히 보기<em class="xi-angle-right-min"></em></span>
+                </p>
+              </li>
+              <li>
+                <a href="#"><div></div></a>
+                <h4>남산의 부장들</h4>
+                <p class="detail">
+                  <span>비공식작전</span>
+                  <span>감독 &nbsp; 우민호</span>
+                  <span>주연 &nbsp; 이병헌, 이성민, 곽도원</span>
+                  <span>제작사 &nbsp; ㈜하이브미디어코프</span>
+                  <span>자세히 보기<em class="xi-angle-right-min"></em></span>
+                </p>
+              </li>
+              <li>
+                <a href="#"><div></div></a>
+                <h4>퍼펙트맨</h4>
+                <p class="detail">
+                  <span>비공식작전</span>
+                  <span>감독 &nbsp; 용수</span>
+                  <span>주연 &nbsp; 설경구, 조진웅, 허준호</span>
+                  <span>제작사 &nbsp; MANFILM, ㈜쇼박스</span>
+                  <span>자세히 보기<em class="xi-angle-right-min"></em></span>
+                </p>
+              </li>
+              <li>
+                <a href="#"><div></div></a>
+                <h4>봉오동 전투</h4> 
+                <p class="detail">
+                  <span>비공식작전</span>
+                  <span>감독 &nbsp; 원신연</span>
+                  <span>주연 &nbsp; 유해진, 류준열, 조우진</span>
+                  <span>제작사 &nbsp; ㈜빅스톤픽쳐스</span>
+                  <span>자세히 보기<em class="xi-angle-right-min"></em></span>
+                </p>
+              </li>
+              <li>
+                <a href="#"><div></div></a>
+                <h4>미성년</h4> 
+                <p class="detail">
+                  <span>비공식작전</span>
+                  <span>감독 &nbsp; 김윤석</span>
+                  <span>주연 &nbsp; 염정아, 김소진, 김혜준</span>
+                  <span>제작사 &nbsp; ㈜영화사 레드피터</span>
+                  <span>자세히 보기<em class="xi-angle-right-min"></em></span>
+                </p>
+              </li>
+              <li>
+                <a href="#"><div></div></a>
+                <h4>돈</h4> 
+                <p class="detail">
+                  <span>비공식작전</span>
+                  <span>감독 &nbsp; 박누리</span>
+                  <span>주연 &nbsp; 류준열, 유지태, 조우진</span>
+                  <span>제작사 &nbsp; ㈜사나이픽처스</span>
+                  <span>자세히 보기<em class="xi-angle-right-min"></em></span>
+                </p>
+              </li>
+              <li>
+                <a href="#"><div></div></a>
+                <h4>뺑반</h4> 
+                <p class="detail">
+                  <span>비공식작전</span>
+                  <span>감독 &nbsp; 한준희</span>
+                  <span>주연 &nbsp; 공효진, 류준열, 조정석</span>
+                  <span>제작사 &nbsp; 호두앤유픽쳐스㈜</span>
+                  <span>자세히 보기<em class="xi-angle-right-min"></em></span>
+                </p>
+              </li>
+              <li>
+                <a href="#"><div></div></a>
+                <h4>마약왕</h4> 
+                <p class="detail">
+                  <span>비공식작전</span>
+                  <span>감독 &nbsp; 우민호</span>
+                  <span>주연 &nbsp; 송강호, 조정석, 배두나</span>
+                  <span>제작사 &nbsp; ㈜하이브미디어코프</span>
+                  <span>자세히 보기<em class="xi-angle-right-min"></em></span>
+                </p>
+              </li>
+              <li>
+                <a href="#"><div></div></a>
+                <h4>성난황소</h4> 
+                <p class="detail">
+                  <span>비공식작전</span>
+                  <span>감독 &nbsp; 김민호</span>
+                  <span>주연 &nbsp; 마동석, 송지효, 김성오</span>
+                  <span>제작사 &nbsp; ㈜플러스미디어엔터테인먼트</span>
+                  <span>자세히 보기<em class="xi-angle-right-min"></em></span>
+                </p>
+              </li>
+              <li>
+                <a href="#"><div></div></a>
+                <h4>암수살인</h4> 
+                <p class="detail">
+                  <span>비공식작전</span>
+                  <span>감독 &nbsp; 김태균</span>
+                  <span>주연 &nbsp; 김윤석, 주지훈, 문정희</span>
+                  <span>제작사 &nbsp; ㈜필름295/㈜블러썸픽쳐스</span>
+                  <span>자세히 보기<em class="xi-angle-right-min"></em></span>
+                </p>
+              </li>
+              <li>
+                <a href="#"><div></div></a>
+                <h4>조선명탐정: 흡혈괴마의 비밀</h4> 
+                <p class="detail">
+                  <span>비공식작전</span>
+                  <span>감독 &nbsp; 김석윤</span>
+                  <span>주연 &nbsp; 김명민, 오달수, 김지원</span>
+                  <span>제작사 &nbsp; 청년필름</span>
+                  <span>자세히 보기<em class="xi-angle-right-min"></em></span>
+                </p>
+              </li>
+              <li>
+                <a href="#"><div></div></a>
+                <h4>꾼</h4> 
+                <p class="detail">
+                  <span>비공식작전</span>
+                  <span>감독 &nbsp; 장창원</span>
+                  <span>주연 &nbsp; 현빈, 유지태, 배성우</span>
+                  <span>제작사 &nbsp; ㈜영화사 두둥</span>
+                  <span>자세히 보기<em class="xi-angle-right-min"></em></span>
+                </p>
+              </li>
+              <li>
+                <a href="#"><div></div></a>
+                <h4>살인자의 기억법</h4> 
+                <p class="detail">
+                  <span>비공식작전</span>
+                  <span>감독 &nbsp; 원신연</span>
+                  <span>주연 &nbsp; 설경구, 김남길, 김설현</span>
+                  <span>제작사 &nbsp; ㈜W픽처스</span>
+                  <span>자세히 보기<em class="xi-angle-right-min"></em></span>
+                </p>
+              </li>
+              <li>
+                <a href="#"><div></div></a>
+                <h4>택시운전사</h4> 
+                <p class="detail">
+                  <span>비공식작전</span>
+                  <span>감독 &nbsp; 장훈</span>
+                  <span>주연 &nbsp; 송강호, 토마스 크레취만</span>
+                  <span>제작사 &nbsp; 더 램프㈜</span>
+                  <span>자세히 보기<em class="xi-angle-right-min"></em></span>
+                </p>
+              </li>
+              <li>
+                <a href="#"><div></div></a>
+                <h4>특별시민</h4> 
+                <p class="detail">
+                  <span>비공식작전</span>
+                  <span>감독 &nbsp; 박인제</span>
+                  <span>주연 &nbsp; 최민식, 곽도원, 심은경</span>
+                  <span>제작사 &nbsp; ㈜팔레트픽처스</span>
+                  <span>자세히 보기<em class="xi-angle-right-min"></em></span>
+                </p>
+              </li>
+              <li>
+                <a href="#"><div></div></a>
+                <h4>프리즌</h4> 
+                <p class="detail">
+                  <span>비공식작전</span>
+                  <span>감독 &nbsp; 나현</span>
+                  <span>주연 &nbsp; 한석규, 김래원, 이경영</span>
+                  <span>제작사 &nbsp; ㈜큐로홀딩스</span>
+                  <span>자세히 보기<em class="xi-angle-right-min"></em></span>
+                </p>
+              </li>
+            </ul>
+            <!-- 하단 화살표 -->
+            <ul class="btn">
+              <li class="g_page">
+                <span>1</span><span>2</span><span>3</span><span>4</span>
+              </li>
+              <li class="right_btn xi-angle-right"></li>
+            </ul>
+          </div>
+          <div id="tab2">
+            <ul class="lineUp">
+              <li>
+                <div><a href="#"><div></div></a></div>
+                <h4>비공식작전</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section> 
+
+    <footer>
+        <address>COPYRIGHT &copy; 2023 SHOWBOX. ALL RIGHTS RESERVED.</address>
+        <div class="sns">
+          <a href="https://www.youtube.com/SHOWBOXmovie" target='_blank'>
+            <span>Youtube</span>
+            <img src="image/link_icon.svg" alt="링크아이콘">
+          </a>
+          <a href="https://www.instagram.com/showbox.movie" target='_blank'>
+            <span>Instagram</span>
+            <img src="image/link_icon.svg" alt="링크아이콘">
+          </a>
+          <a href="https://www.facebook.com/Showbox.Movie" target='_blank'>
+            <span>Facebook</span>
+            <img src="image/link_icon.svg" alt="링크아이콘">
+          </a>
+        </div>
+
+    </footer>
+  </div>
+
+  <!-- Script Source -->
+  <script src="js/jquery-3.7.0.min.js"></script>
+  <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/movie.js"></script>
+
+</body>
+</html>

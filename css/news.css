@@ -1,0 +1,105 @@
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
+
+html {
+  height: 100%;
+}
+
+body{
+  background: #000;
+  color: #fff;
+  min-height: 100%;
+  font-family: 'Pretendard';
+}
+.wrap{
+  width: 100vw;
+  height: 100vh;
+}
+
+/* 탭메뉴 */
+.tabmenu{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 140px 65px;
+  grid-gap: 0 48px;
+  grid-template-areas: 
+  "tab con con .";
+}
+
+.tab{
+  margin-left: 200px;
+  grid-area: tab;
+  color: #888;
+}
+.tab>li{
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: .5s;
+}
+/* jQuery */
+.tab>li span:first-child{display: none;}
+.tab>li.active{color: #fff;}
+.tab>li:hover{color: #fff;}
+.tab>li:hover span:first-child{display: inline-block;}
+.tab>li.active span:first-child{display: inline-block;}
+
+/* 콘텐츠 */
+.tabContents{grid-area: con;}
+
+.lineUp li{
+  border-bottom: 1px solid #555;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.lineUp li:first-child{border-top: 1px solid #555;}
+.lineUp li a{flex: 5;}
+
+.lineUp li h5{
+  font-size: 16px;
+  font-weight: 400;
+  width: 90px;
+  border-right: 1px solid #888;
+  margin-right: 20px;
+}
+.line2 li h5{
+  text-align: center;
+}
+.lineUp li h4{
+  font-size: 20px;
+  font-weight: 500;
+  margin: 25px 0;
+}
+.lineUp li h6{
+  font-size: 12px;
+  font-weight: 400;
+  color: #888;
+  float: right;
+}
+
+.tabContents>div{display: none;}
+.tabContents>div.active{display: block;}
+
+/* 하단 화살표 */
+.btn{
+  margin: 40px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.g_page span{
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 18px;
+  color: #888;
+  cursor: pointer;
+}
+.g_page span:first-child{color: #fff;}
+.right_btn{
+  padding: 0 5px;
+  cursor: pointer;
+}

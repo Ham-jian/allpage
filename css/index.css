@@ -1,0 +1,295 @@
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
+
+html {
+  height: 100%;
+  overflow-y:hidden;
+}
+
+body{
+  background: #000;
+  color: #fff;
+  min-height: 100%;
+  font-family: 'Pretendard';
+}
+.wrap{
+  width: 100vw;
+  height: 100vh;
+}
+
+
+/* %%%%%%%% MAIN %%%%%%%% */
+.world {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  perspective: 1300px;
+}
+
+.stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+
+.house {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  transform-style: preserve-3d;
+  transform: translateZ(30vw);
+}
+.house_wall{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateZ(-50vw);
+}
+/* 정면이미지______________________________ */
+.hw-front{
+  overflow: hidden;
+}
+.house_contents{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(1.1) translateX(0);
+  transition: 3s;
+  z-index: -999;
+}
+.house_contents:nth-child(1){
+  background: url(../image/main-1.jpg);
+  background-size: cover;
+}
+.house_contents:nth-child(2){
+  background: url(../image/main-2.jpg);
+  background-size: cover;
+}
+.house_contents:nth-child(3){
+  background: url(../image/main-3.jpg);
+  background-size: cover;
+
+}
+
+.house_contents.imgVisible{/* jQuery */
+  opacity:1;
+  transform:scale(1.1)translateX(50px);
+  z-index: 1000;
+}
+
+.house_contents:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(0deg,rgba(0,0,0,0.8),transparent);
+  z-index: -800;
+}
+
+/* 좌측이미지 ________________________________*/
+.hw-left{
+  position: absolute;
+  left: -50vw;
+  width:100vw;
+  transform: rotateY(90deg);
+  overflow: hidden;
+}
+.hw-left div{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(1.1) translateX(0);
+  transition: 3s;
+  z-index: -999;
+}
+.hw-left div:nth-child(1){
+  background: url(../image/main-3.jpg);
+  background-size: cover;
+}
+.hw-left div:nth-child(2){
+  background: url(../image/main-1.jpg);
+  background-size: cover;
+}
+.hw-left div:nth-child(3){
+  background: url(../image/main-2.jpg);
+  background-size: cover;
+}
+
+.hw-left div.imgVisible{/* jQuery */
+  opacity:1;
+  transform:scale(1.1)translateX(-50px);
+  z-index: 1000;
+}
+
+.hw-left div:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 53.65%, rgba(0, 0, 0, 0.35) 100%);
+}
+
+/* 우측이미지 _____________________________*/
+.hw-right{
+  position: absolute;
+  left: 50vw;
+  width:100vw;
+  transform: rotateY(-90deg);
+  overflow: hidden;
+}
+.hw-right div{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(1.1) translateX(0);
+  transition: 3s;
+  z-index: -999;
+}
+.hw-right div:nth-child(1){
+  background: url(../image/main-2.jpg);
+  background-size: cover;
+}
+.hw-right div:nth-child(2){
+  background: url(../image/main-3.jpg);
+  background-size: cover;
+}
+.hw-right div:nth-child(3){
+  background: url(../image/main-1.jpg);
+  background-size: cover;
+}
+.hw-right div.imgVisible{/* jQuery */
+  opacity:1;
+  transform:scale(1.1)translateX(-50px);
+  z-index: 1000;
+}
+
+.hw-right div:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 53.65%, rgba(0, 0, 0, 0.35) 100%);
+}
+
+/* 글자 */
+.house_text{
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  padding: 0 0 150px 110px;
+  box-sizing: border-box;
+  transform: translateX(0px);
+  opacity: 0;
+  transition:all 1s;
+}
+.house_text.textVisible{ /*->jQuery*/
+  opacity: 1;
+  transform: translateX(50px);
+}
+
+.hc-title{
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+.hc-sub{
+  font-size: 30px;
+  width: 700px;
+  font-weight: 200;
+}
+
+/* 자세히보기 */
+.con-btn{
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+}
+.con-btn span{
+  font-size: 24px;
+  font-weight: 200;
+  margin-right: 10px;
+  position: relative;
+}
+.con-btn span:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: #fff;
+  transition: .5s;
+}
+.con-btn span:hover:before{width: 100%;}
+.con-btn em{
+  font-size: 24px;
+  font-weight: 100;
+}
+
+/* 좌우버튼 */
+.icon{
+  font-size: 70px;
+  color: #fff;
+}
+.side_btn .lbtn{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+  left: 120px;
+  width: inherit;
+  height: inherit;
+}
+.side_btn .lbtn:hover{opacity: 0.5;}
+
+.side_btn .rbtn{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+  right: 120px;
+  width: inherit;
+  height: inherit;
+}
+.side_btn .rbtn:hover{opacity: 0.5;}
+
+
+
+
+
+
+
+
+
+
+
+

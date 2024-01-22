@@ -1,0 +1,358 @@
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
+
+#txt1{position:fixed;top:10px;right:10px;}  /*스크롤바 위치확인*/
+
+
+/* %%%%%%%%% TOP버튼 %%%%%%%%% */
+
+.top_btn{
+	position:fixed;
+  z-index:100;
+  bottom:68px;
+  right:68px;
+  width:40px;
+  height:40px;
+  border-radius:50%;   
+  background:#fff;
+  text-align:center;
+}
+.top_btn>a>i{
+  line-height:40px;
+  color:#222;
+  font-size:20px;
+}
+
+html {
+  height: 100%;
+}
+
+body{
+  background: #000;
+  color: #fff;
+  min-height: 100%;
+  font-family: 'Pretendard';
+}
+.wrap{
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Sub Menu */
+/* .sub.s1{
+  display: flex;
+  position: absolute;
+  z-index: 100;
+} */
+
+/* %%%%%%%% SECTION %%%%%%%% */
+
+/* Article(1)--------------- */
+.a1{
+  display: grid;
+  grid-template-areas:
+  ". img1 img1 img1"
+  ". p1 p1 ."
+  ". slide slide slide"
+  ".p2 p2 ."
+  ;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 200px 65px 0;
+  grid-gap: 0 48px;
+}
+.atitle1{
+  grid-area: img1;
+  position: relative;
+}
+.p1{grid-area: p1;}
+.slide{grid-area: slide;}
+.p2{grid-area: p2;}
+
+.a1 h2{
+  position: absolute;
+  bottom: 300px;
+  left: -280px;
+  font-size: 80px;
+  z-index: 1;
+  opacity: 0;
+  transition: 1s;
+}
+.a1 h2.active{
+  opacity: 1;
+  bottom: 100px;
+}
+
+.a1_img{
+  background: url(../image/about_a1_img.png) no-repeat;
+  background-size: cover;
+  height: 460px;
+  opacity: .5;
+}
+.a1 .p1, 
+.a1 .p2{
+  margin: 40px 0 160px 0;
+  /* width: 800px; */
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+  word-break: keep-all;
+}
+
+/* 슬라이드 */
+.slide{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.slide_in{overflow: hidden;}
+.slide_in ul{display: flex;}
+.slide_in ul img{
+  width: 330px;
+  margin-bottom: 10px;
+  margin-right: 15px;
+}
+.slide_in ul li{
+  display: flex;
+  flex-direction: column;
+}
+
+/* 좌우버튼 */
+.icon{
+  font-size: 70px;
+  color: #fff;
+}
+.side_btn .lbtn{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  left:-80px;
+  width:inherit;
+  height: inherit;
+}
+.side_btn .lbtn:hover{opacity: 0.5;}
+
+.side_btn .rbtn{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  right:20px;
+  width:inherit;
+  height: inherit;
+}
+.side_btn .rbtn:hover{opacity: 0.5;}
+
+/* Article(2)------------------ */
+#history{
+  position: relative;
+}
+.a2{
+  display: grid;
+  grid-template-areas:
+  "img2 img2 img2 img2"
+  ". p p ."
+  "nav body1 body1 body1"
+  "nav body2 body2 body2"
+  "nav body3 body3 body3"
+  "nav body4 body4 body4"
+  "nav body5 body5 body5"
+  ;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0px 65px;
+  grid-gap: 0 48px;
+}
+.atitle2{
+  grid-area: img2;
+  position: relative;
+}
+.a2 p{grid-area: p;}
+.nav_box{grid-area: nav;}
+.body1{grid-area: body1;}
+.body2{grid-area: body2;}
+.body3{grid-area: body3;}
+.body4{grid-area: body4;}
+.body5{grid-area: body5;}
+
+.a2_img{
+  background: url(../image/about_a2_img.png) no-repeat;
+  background-size: cover;
+  height: 350px;
+  margin-top: 200px;
+}
+.a2 h2{
+  position: absolute;
+  bottom: 20px;
+  left: 350px;
+  font-size: 80px;
+  z-index: 1;
+  opacity: 0;
+  transition: 1s;
+}
+.a2 h2.active{opacity: 1;left: 455px;}
+
+.nav_box{
+  margin-top: 160px;
+  padding-bottom: 30px;
+}
+.a2_nav{
+  position: sticky;
+  top: 180px;
+}
+.a2_nav span.on{
+  color: #fff;
+}
+
+.a2_nav span{
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 200px;
+  margin-bottom: 30px;
+  color: #888;
+  transition: .5s;
+}
+
+.a2 p{
+  margin-top: 40px;
+  /* width: 800px; */
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+  word-break: keep-all;
+}
+
+/* body */
+.body{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0 48px;
+}
+.body:nth-child(even)>.body_inner{grid-column: 1/3;}
+.body:nth-child(odd)>.body_inner{grid-column: 2/4;}
+.body h3{
+  font-size: 50px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #fff;
+}
+.body_inner{padding-top: 160px;}
+.body_inner div{
+  padding: 30px 0;
+}
+.body_inner span:first-child{
+  margin-right: 30px;
+  color: #888;
+}
+.body_inner span:last-child{font-size: 22px;}
+
+.body:nth-child(even)>div ul:last-child,
+.body:nth-child(odd)>div ul:first-child{
+  width: 280px;
+  height: 400px;
+  margin-top: 240px;
+  background-size: cover;
+  overflow: hidden;
+}
+.body:nth-child(even)>div:last-child{grid-column: 3/4;}
+.body:nth-child(odd)>div:first-child{grid-column: 1/2;}
+
+/* 백그라운드 */
+.body1_img ul{background: url(../image/poster1-1.png);}
+.body2_img ul{
+  background: url(../image/poster2-1.png);
+  position: sticky;
+  top:180px;
+}
+.body2_img{padding-bottom: 30px;}
+.body3_img ul{background: url(../image/poster3-1.png);}
+.body4_img ul{background: url(../image/poster4-1.png);}
+.body5_img ul{background: url(../image/poster5-1.png);}
+
+/* Article(3)------------------ */
+.a3{
+  display: grid;
+  grid-template-areas:
+  "img3 img3 img3 ."
+  ". . p3 p3"
+  ". b1 b2 ."
+  ". b3 b4 b5"
+  ;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 200px 65px;
+  grid-gap: 0 48px;
+}
+
+.atitle3{grid-area: img3;}
+.a3 p{grid-area: p3;}
+.a3 .b1{grid-area: b1;}
+.a3 .b2{grid-area: b2;}
+.a3 .b3{grid-area: b3;}
+.a3 .b4{grid-area: b4;}
+.a3 .b5{grid-area: b5;}
+
+.atitle3{position: relative;}
+.a3 h2{
+  position: absolute;
+  bottom: 20px;
+  right: -225px;
+  font-size: 80px;
+  opacity: 0;
+  z-index: 1;
+  transition: 1s;
+}
+.a3 h2.active{
+  opacity: 1;
+  right: -125px;
+}
+
+.a3_img{
+  background: url(../image/about_a3_img.png);
+  background-size: cover;
+  height: 526px;
+  opacity: .5;
+}
+
+.a3>p{
+  margin: 40px 0 150px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+  word-break: keep-all;
+}
+
+.business div:first-child{
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 260px;
+}
+.a3 .bimg1{background: url(../image/bimg1-1.png);}
+.a3 .bimg2{background: url(../image/bimg1-2.png);}
+.a3 .bimg3{background: url(../image/bimg1-3.png);}
+.a3 .bimg4{background: url(../image/bimg1-4.png);}
+.a3 .bimg5{background: url(../image/bimg1-5.png);}
+
+.business{margin-bottom: 40px;}
+.a3 .btitle{
+  font-size: 20px;
+  font-weight: 700;
+  margin: 20px 0 10px;
+  position: relative;
+  width: 100%;
+}
+.a3 .bbody{
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  word-break: keep-all;
+  color: #888;
+}
+
+.a3 .btitle span{
+  font-size: 28px;
+  font-weight: 300;
+  margin-left: 8px;
+  position: absolute;
+  top: -3px;
+}
