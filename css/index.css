@@ -3,6 +3,7 @@
 @import url(footer.css);
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
 
+
 html {
   height: 100%;
   overflow-y:hidden;
@@ -70,7 +71,7 @@ body{
   z-index: -999;
 }
 .house_contents:nth-child(1){
-  background: url(../image/main-1.jpg);
+  background: url(../image/main-1-1.jpg);
   background-size: cover;
 }
 .house_contents:nth-child(2){
@@ -124,7 +125,7 @@ body{
   background-size: cover;
 }
 .hw-left div:nth-child(2){
-  background: url(../image/main-1.jpg);
+  background: url(../image/main-1-1.jpg);
   background-size: cover;
 }
 .hw-left div:nth-child(3){
@@ -176,7 +177,7 @@ body{
   background-size: cover;
 }
 .hw-right div:nth-child(3){
-  background: url(../image/main-1.jpg);
+  background: url(../image/main-1-1.jpg);
   background-size: cover;
 }
 .hw-right div.imgVisible{/* jQuery */
@@ -264,10 +265,12 @@ body{
   position: absolute;
   top:50%;
   transform: translateY(-50%);
-  z-index: 9999;
+  z-index: 3;
   left: 120px;
   width: inherit;
   height: inherit;
+  transition: all .3s;
+  cursor: pointer;
 }
 .side_btn .lbtn:hover{opacity: 0.5;}
 
@@ -275,10 +278,12 @@ body{
   position: absolute;
   top:50%;
   transform: translateY(-50%);
-  z-index: 9999;
+  z-index: 3;
   right: 120px;
   width: inherit;
   height: inherit;
+  transition: all .3s;
+  cursor: pointer;
 }
 .side_btn .rbtn:hover{opacity: 0.5;}
 

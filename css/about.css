@@ -266,8 +266,16 @@ body{
   top:180px;
 }
 .body2_img{padding-bottom: 30px;}
-.body3_img ul{background: url(../image/poster3-1.png);}
-.body4_img ul{background: url(../image/poster4-1.png);}
+.body3_img ul{
+  background: url(../image/poster3-1.png);
+  position: sticky;
+  top: 0;
+}
+.body4_img ul{
+  background: url(../image/poster4-1.png);
+  position: sticky;
+  top: 0;
+}
 .body5_img ul{background: url(../image/poster5-1.png);}
 
 /* Article(3)------------------ */
